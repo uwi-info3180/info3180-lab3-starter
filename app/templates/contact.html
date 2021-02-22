@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Form{% endblock %}
+{% with messages =
+    get_flashed_messages(with_categories=true) %}
+     {% if messages %}
+     <ul class="flashes">
+     {% for category, message in messages %}
+     <li class="{{ category }}">{{ message }}</li>
+     {% endfor %}
+     </ul>
+     {% endif %}
+{% endwith %}
+{% block main %}
+<h1>Contact Form</h1>
+<h3>Fill in this form to contact the site owners.</h3>
+<div id='contact_form'>
+<form action="{{url_for('contact')}}" method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+  <p><label>Name</label><br> Please enter your full name <br> <input type="text" id="full_name"></p>
+  <p><label>Name</label><br> Please enter your email <br> <input type="text" id="email"></p>
+  <p><label>Name</label><br> Please enter the subject of your message <br> <input type="text" id="subject"></p>
+  <p><label>Name</label><br> Please enter the message you would like to send <br> <input type="text" id="message"></p>
+  <input type="submit">
+</form> 
+</div>
+{% endblock %}

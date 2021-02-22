@@ -5,7 +5,7 @@ class Config(object):
     DEBUG = False
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'Som3$ec5etK*y'
     MAIL_SERVER = os.environ.get('MAIL_SERVER') or 'localhost'
-    MAIL_PORT = os.environ.get('MAIL_PORT') or '25'
+    MAIL_PORT = os.environ.get('MAIL_PORT') or '2500'
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD  = os.environ.get('MAIL_PASSWORD')
 
