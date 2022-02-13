@@ -11,3 +11,7 @@ venv/
 
 # PyCharm
 .idea
+
+# Environment Variables
+.env
+.flaskenv
