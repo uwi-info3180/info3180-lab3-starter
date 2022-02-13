@@ -12,6 +12,9 @@ venv/
 # PyCharm
 .idea
 
+# VS Code
+.vscode
+
 # Environment Variables
 .env
 .flaskenv
