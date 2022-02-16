@@ -6,3 +6,6 @@ Jinja2==3.0.3
 MarkupSafe==2.0.1
 python-dotenv==0.19.2
 Werkzeug==2.0.3
+email_validator
+flask_mail
+flask_wtf

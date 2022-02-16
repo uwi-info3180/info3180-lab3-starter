@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html>
+{% block main %}
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Contact Form</h1>
+	<form method="POST" action="{{url_for('contact')}}">
+		<hr>
+		<p>Fill in this form to contact the site owners.</p>
+
+		{{form.csrf_token}}
+
+        {{form.name.label}}
+		<label style="color: red;">(Required)</label>
+		<p>Please enter your full name</p>
+		{{form.name}}
+		<br>
+
+		{{form.email.label}}
+		<label style="color: red;">(Required)</label>
+		<p>Please enter your e-mail address</p>
+		{{form.email}}
+		<br>
+
+		{{form.subject.label}}
+		<label style="color: red;">(Required)</label>
+		<p>Please enter the subject for your message</p>
+		{{form.subject}}
+		<br>
+
+		{{form.message.label}}
+		<label style="color: red;">(Required)</label>
+		<p>Please enter the message you would like to send</p>
+		{{form.message}}
+		<br>
+
+		<input type="submit" value="Send">
+
+	</form>
+</body>
+{% endblock %}
+</html>
